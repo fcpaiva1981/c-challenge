@@ -17,7 +17,7 @@ public class PermissaoController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<PermissaoModel>>> BuscarTodosUsuarios()
+    public async Task<ActionResult<IEnumerable<PermissaoModel>>> BuscarTodasPermissoes()
     {
         List<PermissaoModel> permissaoModels = await _permissaoRepository.BuscarTodasPermissoes();
         return Ok(permissaoModels);
