@@ -6,10 +6,13 @@
     <projectFile profileName="http">ApiChallengeCSharp/ApiChallengeCSharp.csproj</projectFile>
     <projectFile profileName="https">ApiChallengeCSharp/ApiChallengeCSharp.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f2d1acde-b4de-429e-8851-93efe590ede1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ApiChallengeCSharp/Data/ChallengeDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiChallengeCSharp/Data/ChallengeDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiChallengeCSharp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiChallengeCSharp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiChallengeCSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApiChallengeCSharp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiChallengeCSharp/Model/PermissaoModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiChallengeCSharp/Model/PermissaoModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +22,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2g4IUpKHwy5F6fHzCpWYxx6RAgA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,6 +39,10 @@
     "Docker.ApiChallengeCSharp/Dockerfile.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   },
@@ -106,7 +113,10 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -119,6 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714950443897</updated>
       <workItem from="1714950445000" duration="120000" />
+      <workItem from="1714951627673" duration="672000" />
     </task>
     <servers />
   </component>
