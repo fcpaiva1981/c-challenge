@@ -1,3 +1,8 @@
+using ApiChallengeCSharp.Data;
+using ApiChallengeCSharp.Repository.Interfaces;
+using ApiChallengeCSharp.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+var connectionStringMysql = builder.Configuration.GetConnectionString("ConnectionMySQL");
+builder.Services.AddDbContext<ChallengeDbContext>(options => options.UseMySql(connectionStringMysql, 
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.4.0-Mysql")));
+
+
+builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+builder.Services.AddScoped<IPermissaoRepository, PermissaoRepository>();
 
 var app = builder.Build();
 
