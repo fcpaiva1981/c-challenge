@@ -10,7 +10,6 @@ public class PermissaoMap : IEntityTypeConfiguration<PermissaoModel>
     {
         builder.HasKey("Id");
         builder.Property(x => x.Descricao).IsRequired().HasMaxLength(255);
-        builder.Property(x => x.UsuarioId);
-        builder.HasOne(x => x.Usuario);
+
     }
 }
