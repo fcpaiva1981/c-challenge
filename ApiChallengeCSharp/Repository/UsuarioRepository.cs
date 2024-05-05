@@ -26,7 +26,7 @@ public class UsuarioRepository : IUsuarioRepository
 
     public async Task<UsuarioModel> Adicionar(UsuarioModel usuario)
     {
-        _dbContext.Usuarios.Add(usuario);
+        await _dbContext.Usuarios.AddAsync(usuario);
         await _dbContext.SaveChangesAsync();
         return usuario;
     }
