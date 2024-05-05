@@ -1,5 +1,6 @@
 using ApiChallengeCSharp.Data;
 using ApiChallengeCSharp.Repository.Interfaces;
+using ApiChallengeCSharp.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionStringMysql = builder.Configuration.GetConnectionString("ConnectionMySQL");
-builder.Services.AddDbContext<ChallengeDbContext>(options => options.UseMySql(connectionStringMysql, Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.4.0-Mysql")));
+builder.Services.AddDbContext<ChallengeDbContext>(options => options.UseMySql(connectionStringMysql, 
+    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.4.0-Mysql")));
 
 
-builder.Services.AddScoped<IUsuarioRepository,IUsuarioRepository>();
+builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,4 +1,5 @@
-﻿using ApiChallengeCSharp.Model;
+﻿using ApiChallengeCSharp.Data.Map;
+using ApiChallengeCSharp.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiChallengeCSharp.Data;
@@ -13,6 +14,8 @@ public class ChallengeDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new UsuarioMap());
+        modelBuilder.ApplyConfiguration(new PermissaoMap());
         base.OnModelCreating(modelBuilder);
     }
 }
