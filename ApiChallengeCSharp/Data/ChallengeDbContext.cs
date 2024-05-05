@@ -11,4 +11,8 @@ public class ChallengeDbContext : DbContext
     public DbSet<UsuarioModel> Usuarios { get; set; }
     public DbSet<PermissaoModel> Permissaos { get; set; }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+    }
 }
