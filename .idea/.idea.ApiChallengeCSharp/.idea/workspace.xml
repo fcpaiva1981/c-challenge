@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f2d1acde-b4de-429e-8851-93efe590ede1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ApiChallengeCSharp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApiChallengeCSharp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiChallengeCSharp/Model/PermissaoModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiChallengeCSharp/Model/PermissaoModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiChallengeCSharp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiChallengeCSharp/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,7 @@
   "keyToString": {
     "Docker.ApiChallengeCSharp/Dockerfile.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -130,6 +130,7 @@
       <updated>1714950443897</updated>
       <workItem from="1714950445000" duration="120000" />
       <workItem from="1714951627673" duration="672000" />
+      <workItem from="1715005795312" duration="605000" />
     </task>
     <servers />
   </component>

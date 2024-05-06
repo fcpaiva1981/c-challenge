@@ -17,10 +17,15 @@ builder.Services.AddDbContext<ChallengeDbContext>(options => options.UseMySql(co
     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.4.0-Mysql")));
 
 
+
+
 builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
 builder.Services.AddScoped<IPermissaoRepository, PermissaoRepository>();
 
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
