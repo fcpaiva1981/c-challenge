@@ -1,12 +1,15 @@
 # Funcionanmento da API
 
-### Pré-requisitos
+### Especificações
 
 * Docker
 * MySQL 8.x
-* Executar o docker-compose.yml do MySQL para instanciar o banco
 * Aplicação escrita em .NET 8
 
+### Pré-requisitos
+   * Acessar a pasta: ..\..\banco
+   * Executar o comando : docker build -t counter-image -f Dockerfile .
+   
 ### Funcionamento da API
 
 * Montando a imagem
