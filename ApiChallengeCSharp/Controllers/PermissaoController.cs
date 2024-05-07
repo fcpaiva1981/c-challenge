@@ -1,4 +1,5 @@
-﻿using ApiChallengeCSharp.Model;
+﻿using ApiChallengeCSharp.Dto;
+using ApiChallengeCSharp.Model;
 using ApiChallengeCSharp.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,7 @@ public class PermissaoController : ControllerBase
 
 
     [HttpPost]
-    public async Task<ActionResult<PermissaoModel>> Cadastrar([FromBody] PermissaoModel permissao)
+    public async Task<ActionResult<PermissaoModel>> Cadastrar([FromBody] PermissaoDto permissao)
     {
         PermissaoModel permissaoModel = await _permissaoRepository.Adicionar(permissao);
         return Ok(permissaoModel);
@@ -41,7 +42,7 @@ public class PermissaoController : ControllerBase
 
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<PermissaoModel>> Atualizar(int id, [FromBody] PermissaoModel permissao)
+    public async Task<ActionResult<PermissaoModel>> Atualizar(int id, [FromBody] PermissaoDto permissao)
     {
         permissao.Id = id;
         PermissaoModel permissaoModel = await _permissaoRepository.Atualizar(permissao, id);

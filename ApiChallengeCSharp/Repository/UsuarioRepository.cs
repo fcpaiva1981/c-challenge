@@ -1,4 +1,5 @@
 ﻿using ApiChallengeCSharp.Data;
+using ApiChallengeCSharp.Dto;
 using ApiChallengeCSharp.Model;
 using ApiChallengeCSharp.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -24,16 +25,22 @@ public class UsuarioRepository : IUsuarioRepository
         return await _dbContext.Usuarios.ToListAsync();
     }
 
-    public async Task<UsuarioModel> Adicionar(UsuarioModel usuario)
+    public async Task<UsuarioModel> Adicionar(UsuarioDto usuario)
     {
-        await _dbContext.Usuarios.AddAsync(usuario);
+        UsuarioModel usuarioModel = new UsuarioModel();
+        usuarioModel.Nome = usuario.Nome;
+        usuarioModel.Email = usuario.Email;
+        await _dbContext.Usuarios.AddAsync(usuarioModel);
         await _dbContext.SaveChangesAsync();
-        return usuario;
+        return usuarioModel;
     }
 
-    public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id)
+    public async Task<UsuarioModel> Atualizar(UsuarioDto usuario, int id)
     {
         UsuarioModel usuarioModel = await BuscarPorId(id);
+
+        usuarioModel.Nome = usuario.Nome;
+        usuarioModel.Email = usuario.Email;
 
         if (usuarioModel == null)
         {

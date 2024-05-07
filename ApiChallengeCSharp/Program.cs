@@ -5,6 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionStringMysql = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ChallengeDbContext>(options => {
+    options.UseMySql(connectionStringMysql, ServerVersion.AutoDetect(connectionStringMysql));
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,14 +18,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionStringMysql = builder.Configuration.GetConnectionString("ConnectionMySQL");
-builder.Services.AddDbContext<ChallengeDbContext>(options => options.UseMySql(connectionStringMysql, 
-    Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.4.0-Mysql")));
 
 
-
-
-builder.Services.AddScoped<IUsuarioRepository,UsuarioRepository>();
+builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IPermissaoRepository, PermissaoRepository>();
 
 

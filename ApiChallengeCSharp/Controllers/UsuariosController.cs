@@ -1,4 +1,5 @@
-﻿using ApiChallengeCSharp.Model;
+﻿using ApiChallengeCSharp.Dto;
+using ApiChallengeCSharp.Model;
 using ApiChallengeCSharp.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,7 @@ public class UsuariosController : ControllerBase
 
 
     [HttpPost]
-    public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuario)
+    public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioDto usuario)
     {
         UsuarioModel usuarioModel = await _usuarioRepository.Adicionar(usuario);
         return Ok(usuarioModel);
@@ -41,7 +42,7 @@ public class UsuariosController : ControllerBase
 
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<UsuarioModel>> Atualizar(int id, [FromBody] UsuarioModel usuario)
+    public async Task<ActionResult<UsuarioModel>> Atualizar(int id, [FromBody] UsuarioDto usuario)
     {
         usuario.Id = id;
         UsuarioModel usuarioModel = await _usuarioRepository.Atualizar(usuario, id);
